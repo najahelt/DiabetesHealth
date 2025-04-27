@@ -1,0 +1,24 @@
+---
+title: "Reproducible documents"
+author: "Naja"
+format: html
+
+---
+
+```{r}
+2+2
+```
+```{r setup}
+library(tidyverse)
+```
+## About me
+- Naja
+- Neurologisk forskning
+- Aarhus Universitet
+Forsker i om PN er **tidligt** symptom på *PD*. Maybe^hvemved^ ingen~endnu~.
+
+## Simple code
+```{r}
+3*3
+```
+
