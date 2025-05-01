@@ -43,11 +43,20 @@ ggplot(post_meal_data, aes(x = BMI)) +
   geom_histogram()
 ```
 ```
+
 ```{r}
 ggplot(post_meal_data, aes(x = BMI)) +
   geom_histogram()
 ```
 
-## virker git nu?
+## Exercise plot a discrete variable
 
+```{r}
+#| fig-cap: "distribution of Group"
+#| label: fig-group-bar
+ggplot(post_meal_data, aes(x = Group)) +
+  geom_bar()
+```
+
+See @fig-group-bar above for a cool plot!
 
