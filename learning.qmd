@@ -2,15 +2,12 @@
 title: "Reproducible documents"
 author: "Naja"
 format: html
-
 ---
 
 ```{r}
 2+2
 ```
-```{r setup}
-library(tidyverse)
-```
+
 ## About me
 - Naja
 - Neurologisk forskning
@@ -24,3 +21,33 @@ Forsker i om PN er **tidligt** symptom på *PD*. Maybe^hvemved^ ingen~endnu~.
 
 ## Testing for Git
 Solen skinner og himlen er blå 
+```{r setup}
+#| message: false
+#| warning: false
+library(tidyverse)
+post_meal_data <- read_csv2(here::here("data/post-meal-insulin.csv"))
+```
+
+## Showing the data
+```{r}
+post_meal_data
+```
+
+glimpse(post_meal_data)
+
+## Plot one continuous variable
+```{r}
+#| fig-cap: "Distribution of BMI."
+#| label: fig-bmi-histo
+ggplot(post_meal_data, aes(x = BMI)) +
+  geom_histogram()
+```
+```
+```{r}
+ggplot(post_meal_data, aes(x = BMI)) +
+  geom_histogram()
+```
+
+## virker git nu?
+
+
