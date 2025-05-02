@@ -5,7 +5,7 @@ format: html
 ---
 
 ```{r}
-2+2
+2 + 2
 ```
 
 ## About me
@@ -16,7 +16,7 @@ Forsker i om PN er **tidligt** symptom på *PD*. Maybe^hvemved^ ingen~endnu~.
 
 ## Simple code
 ```{r}
-3*3
+3 * 3
 ```
 
 ## Testing for Git
@@ -82,7 +82,7 @@ ggplot(post_meal_data, aes(x = Group, fill = as.character(glykemi))) +
 ```{r}
 ggplot(post_meal_data, aes(x = BMI)) +
   geom_histogram()
-  ggplot(post_meal_data, aes(x = glykemi)) +
+ggplot(post_meal_data, aes(x = glykemi)) +
   geom_bar()
 ```
 
@@ -95,8 +95,7 @@ ggplot(post_meal_data, aes(x = BMI)) +
 #| layout-ncol: 2
 ggplot(post_meal_data, aes(x = BMI)) +
   geom_histogram()
-  
+
 ggplot(post_meal_data, aes(x = glykemi)) +
   geom_bar()
 ```
-
