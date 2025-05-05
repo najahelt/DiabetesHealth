@@ -520,6 +520,50 @@ Figure&nbsp;4: Scatterplot of BMI and the area under the curve for glucose.
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>small_post_meal_data <span class="ot">&lt;-</span> <span class="fu">select</span>(post_meal_data, id, Age, BMI, Group, auc_pg, auc_ins, glykemi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section id="renaming-columns" class="level2">
+<h2 class="anchored" data-anchor-id="renaming-columns">Renaming columns</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>small_post_meal_data <span class="sc">|&gt;</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">auc_glucose =</span> auc_pg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 35 × 7
+      id   Age   BMI Group auc_glucose auc_ins glykemi
+   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+ 1     1    50  27.5 FDR          806.  28728.       0
+ 2     2    51  33.7 FDR          944.  42243.       0
+ 3     3    43  26.3 FDR          694.   7108.       0
+ 4     4    55  25.9 FDR          731.  37593.       0
+ 5     5    53  29.4 FDR         1004.  33863.       0
+ 6     6    51  23.7 FDR          713.  15008.       0
+ 7     7    48  23.9 FDR          965.  23196.       0
+ 8     8    35  22   FDR          741.  15272.       0
+ 9     9    54  26.4 FDR          848.  24426.       0
+10    10    52  24.5 FDR          759.  22475.       0
+# ℹ 25 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>small_post_meal_data <span class="sc">|&gt;</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">auc_glucose =</span> auc_pg,</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">auc_insulin =</span> auc_ins</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 35 × 7
+      id   Age   BMI Group auc_glucose auc_insulin glykemi
+   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;       &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;
+ 1     1    50  27.5 FDR          806.      28728.       0
+ 2     2    51  33.7 FDR          944.      42243.       0
+ 3     3    43  26.3 FDR          694.       7108.       0
+ 4     4    55  25.9 FDR          731.      37593.       0
+ 5     5    53  29.4 FDR         1004.      33863.       0
+ 6     6    51  23.7 FDR          713.      15008.       0
+ 7     7    48  23.9 FDR          965.      23196.       0
+ 8     8    35  22   FDR          741.      15272.       0
+ 9     9    54  26.4 FDR          848.      24426.       0
+10    10    52  24.5 FDR          759.      22475.       0
+# ℹ 25 more rows</code></pre>
+</div>
+</div>
+</section>
 
 </main>
 <!-- /main column -->
