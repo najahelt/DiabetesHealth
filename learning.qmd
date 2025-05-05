@@ -136,3 +136,19 @@ small_post_meal_data |>
     auc_insulin = auc_ins
   )
 ```
+
+## Select and rename tasks
+```{r}
+post_meal_data |>
+  select(contains("OGTT"))
+post_meal_data |>
+  select(contains(".."), -contains("..."))
+post_meal_data |>
+  rename(
+    P.Glucose.minus5.OGTT = P.Glucose..5.OGTT,
+    Insulin.minus5.OGTT.X = Insulin..5.OGTT.X
+  )
+post_meal_data |>
+  select(id, BMI, Length, Weight, Age) |>
+  rename(Height = Length)
+```
